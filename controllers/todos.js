@@ -13,8 +13,8 @@ const create = (req, res) => {
   res.redirect('/');
 }
 
-const deleteTodo = (req, res) => {
- Todo.deleteOne(req.params.id);
+const delOne = (req, res) => {
+ Todo.delOne(req.params.id);
   res.redirect('/');
 }
 
@@ -22,5 +22,5 @@ const deleteTodo = (req, res) => {
 module.exports = {
   index,
   create,
-  deleteTodo,
+  delOne,
 };

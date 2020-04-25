@@ -15,7 +15,7 @@ router.get('/', function(req, res, next) {
 router.get('/', todosCtrl.index);
 router.post('/', todosCtrl.create);
 
-router.delete('/:id', todosCtrl.deleteTodo);
+router.delete('/:id', todosCtrl.delOne);
 
 
 module.exports = router;
