@@ -9,12 +9,12 @@
     <% if (!todos.length) { %>
       <h3> There are no To Do's yet </h3>
       <% } else if (todos.length >= 1){ %>
-    <ul>
-      <% todos.forEach((t, idx) => { %>
-      <li>
-        <p> <%= t.todo %>
-          <span class="notDone">
-            - <%= t.done ? 'done' : 'not done' %>
+    <ul class="inlineStyle">
+      <% todos.forEach((i, idx) => { %>
+      <li >
+        <p> <%= i.todo %>
+          <span class="status">
+            - <%= i.done ? 'done' : 'not done' %>
           </span>
         </p>
         <form action="/<%= idx %>?_method=DELETE" class="delete-form" method="POST">
